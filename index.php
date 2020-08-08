@@ -106,9 +106,6 @@
                         $num = mysqli_num_rows($status);
                         if($num==1)
                         {
-                            echo "<script>
-                            document.location='https://peregrinewallet.herokuapp.com/';
-                            </script>";
                             session_start();
                             $_SESSION['pereguser']=$name;
                             $_SESSION['peregpass']=$pass;
@@ -117,6 +114,9 @@
                             {
                                 $_SESSION['peregwallet']=$row['wallet'];
                             }
+                            echo "<script>
+                            document.location='https://peregrinewallet.herokuapp.com/';
+                            </script>";
                         }
                         else{
                             echo "<script>alert('You have entered a wrong Password')</script>";
