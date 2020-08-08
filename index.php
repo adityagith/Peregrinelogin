@@ -123,7 +123,7 @@
                             {
                                 $_SESSION['peregwallet']=$row['wallet'];
                                 echo "<script>
-                                window.location='wallet.php';
+                                window.location='https://peregrinewallet.herokuapp.com';
                                 </script>";
                                 break;
                             }
