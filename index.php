@@ -72,15 +72,6 @@
 </head>
 <body>
     <body>
-        <!-- <div class="nav">
-            <center>
-                <a href="" class='a'>Home</a>
-                <a href="" class='a'>Book a Flight</a>
-                <a href="" class='a'>Booked Flights</a>
-                <a href="" class='a'>Wallet</a>
-                <a href="" class='a'>Logout</a>
-            </center>
-        </div> -->
         <div class="main">
           <center>
             <div class="login">
@@ -116,7 +107,7 @@
                         if($num==1)
                         {
                             echo "<script>
-                            document.location='http://localhost/The%20Peregrine%20Falcon/welcome.php';
+                            document.location='https://peregrinewallet.herokuapp.com/';
                             </script>";
                             session_start();
                             $_SESSION['pereguser']=$name;
