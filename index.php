@@ -72,11 +72,20 @@
 </head>
 <body>
     <body>
+        <!-- <div class="nav">
+            <center>
+                <a href="" class='a'>Home</a>
+                <a href="" class='a'>Book a Flight</a>
+                <a href="" class='a'>Booked Flights</a>
+                <a href="" class='a'>Wallet</a>
+                <a href="" class='a'>Logout</a>
+            </center>
+        </div> -->
         <div class="main">
           <center>
             <div class="login">
             <div class="logo"></div>
-              <form action="https://peregrinelogin.herokuapp.com" method='POST'>
+              <form action="login.php" method='POST'>
                 <input type="text" placeholer="username" name = 'username' placeholder="Enter your Username" id="username"><br>
                 <input type="password" name='pass' placeholder="Enter your Password" id="pwd"><br>
                 <button onclick="submit">Sign in</button>
@@ -85,11 +94,11 @@
                 //peregwall
                 //pereguser
                  //$_SESSION['pereglog']
-                 $server = "bvlhc2scv8m1yu1nmaoj-mysql.services.clever-cloud.com";
-                 $username = "uytwjygr2souynyo";
-                 $password = "6GII4AQCK0k97NS8eVWz";
-                 $database = "bvlhc2scv8m1yu1nmaoj";
-                 $conn = mysqli_Connect($server,$username,$password,$database);    
+                 $server = "db4free.net";
+                 $username = "adidasjiit";
+                 $password = "mysql2020";
+                 $database = "adityajiit";
+                 $conn = mysqli_connect($server,$username,$password,$database);    
              ?>
              <?php
                  $s = "ad";
@@ -113,10 +122,11 @@
                             while($row=mysqli_fetch_assoc($status))
                             {
                                 $_SESSION['peregwallet']=$row['wallet'];
+                                echo "<script>
+                                window.location='wallet.php';
+                                </script>";
+                                break;
                             }
-                            echo "<script>
-                            document.location='https://peregrinewallet.herokuapp.com/';
-                            </script>";
                         }
                         else{
                             echo "<script>alert('You have entered a wrong Password')</script>";
